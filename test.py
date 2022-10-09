@@ -5,6 +5,5 @@ print(t+p)
 super?
 jasně bro
 cajk
-
 21321
 
