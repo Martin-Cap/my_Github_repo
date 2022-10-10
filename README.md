@@ -1,4 +1,3 @@
-# my_Github_repo
-Test
-yes
-nono
+# my_repo
+Dobrý den,
+jde o programy vytvořené při studiu jazyka Python.
