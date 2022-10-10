@@ -1,13 +1,13 @@
-# vstupni hodnoty
+# Vstupní hodnoty
 MESTA = ["Praha", "Viden", "Olomouc", "Svitavy", "Zlin", "Ostrava"]
 CENY = (150, 200, 120, 120, 100, 180)
 ODDELOVAC = "=" * 35
 
-# uvitani uzivatele
+# Uvítání uživatele
 print("VITEJTE U NASI APLIKACE DESTINATIO!")
 print(ODDELOVAC)
 
-# vkladani udaju z
+# Vložení údaje
 print(
 """
 1 - Praha   | 150
@@ -21,11 +21,11 @@ print(
 print(ODDELOVAC)
 lokalita = int(input("VYBERTE CISLO LOKALITY:"))
 
-# uprava zadanych hodnot
+# Úprava zadané hodnoty
 destinace = MESTA[lokalita - 1]
 cena = CENY[lokalita - 1]
 
-# vypisovani vystupu
+# Vypsání výstupu
 print("LISTEK DO:", destinace, "CENA:", cena)
 #print("DEKUJI,", jmeno, "NA MAIL", email, "TI PRIJDE KRATKY DOTAZNIK")
-
+lear
