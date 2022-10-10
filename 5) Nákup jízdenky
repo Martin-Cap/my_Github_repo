@@ -28,4 +28,3 @@ cena = CENY[lokalita - 1]
 # Vypsání výstupu
 print("LISTEK DO:", destinace, "CENA:", cena)
 #print("DEKUJI,", jmeno, "NA MAIL", email, "TI PRIJDE KRATKY DOTAZNIK")
-lear
