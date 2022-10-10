@@ -1,13 +1,13 @@
 # Vstupní hodnoty uživatele
-vyska = 2
-vaha = 80
+vyska = 1.70
+vaha = 75
 jmeno = 'Martin'
 
 
 # Výpočet BMI
-bmi = vaha / vyska ** 2
+bmi = int(vaha / vyska ** 2)
 
-# Vytvoř proměnnou "kategorie", kam uložíš slovní ohodnocení BMI
+# Vytvoří proměnnou "kategorie", kam uloží slovní ohodnocení BMI
 if bmi > 40:
     kategorie = 'těžká obezita'
 elif bmi > 30:
@@ -19,5 +19,5 @@ elif bmi > 18.5:
 else:
     kategorie = 'podvýživa'
 
-# Vytiskni odpoved s vysledkem
+# Vytiskne odpověď s výsledkem
 print(jmeno, "tvé BMI je", bmi, ", což spadá do kategorie", kategorie, ".")
