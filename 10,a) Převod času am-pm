@@ -1,28 +1,27 @@
-# Zadej časový údaj ve formátu "15:41" do proměnné "time"
+# Zadá časový údaj ve formátu "15:41" do proměnné "time"
 time = input('Please enter your time (format HH:MM): ')  # 12:51
 
-# Hodnotu v proměnné rozděl na list hodnot a ulož do proměnné "time_vals"
+# Hodnotu v proměnné rozdělí na list hodnot a uloží do proměnné "time_vals"
 time_vals = time.split(':')
 
-# Vytvoř proměnné "hours" and "mins", kterým přiřadíš hodnoty z "time_vals"
+# Vytvoří proměnné "hours" and "mins", kterými přiřadí hodnoty z "time_vals"
 hours = time_vals[0]
 mins = time_vals[1]
 
-# Pokud je hodnota v "hours" větší jak 12, převeď na příslušný string
-if int(hours) == 12:
-    
-    # ... jinak ponech hodnotu původní
-    adjusted_hours = hours
+# Pokud je hodnota v "hours" větší jak 12, převede na příslušný string
+if int(hours) <= 12:
+        adjusted_hours = hours
 
+ # ... jinak ponechá hodnotu původní
 else:
-    adjusted_hours = str(int(hours) % 12)
+    adjusted_hours = str(int(hours) - 12)
 
 
-# Označ denní dobu a ulož "AM"/"PM" do proměnné "daytime"
+# Označí denní dobu a uloží "AM"/"PM" do proměnné "daytime"
 if int(hours) >= 12:
     daytime = "PM"
 else:
     daytime = "AM"
 
-# Vypiš převedený čas s doplňující větou
+# Vypíše převedený čas s doplňující větou
 print('Converted to english format:', adjusted_hours, ':', mins, daytime)
