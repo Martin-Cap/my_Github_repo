@@ -1,4 +1,4 @@
-# Ulož libovolné jméno a vypiš jej
+# Ulož libovolné jméno a vypiš 
 jmeno = input("ZADEJ JMÉNO: ")
 print("Ukládám '", jmeno,"' do jmeno... ")
 
