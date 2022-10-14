@@ -1,5 +1,5 @@
 # Uloží žádné jméno a vypíše jej
-jmeno = input("ZADEJ JMÉNO: ")
+jmeno = input("ZADEJ JMÉNO:")
 print("Ukládám '", jmeno,"' do jmeno... ")
 
 # Uloží případné příjmení a vypíše jej
@@ -12,7 +12,7 @@ cele_jmeno = jmeno + " " + prijmeni
 print("Celé jméno:", cele_jmeno)
 
 # Vytvoří a vypíše hodnotu délky uložené proměnné "cele_jmeno"
-delka_jmena = len(cele_jmeno)
+delka_jmena = (len(cele_jmeno)) - 1
 print(delka_jmena)
 
 # Vypíše celé jméno ohraničené oddělovači
