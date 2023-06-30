@@ -25,5 +25,5 @@ if cislo_dne.isnumeric() and 1 <= int(cislo_dne) <= 7:
 
 else:
     
-    # ... pokud ne, upozorní na chybný vstup
+    # ... pokud ne  , upozorní na chybný vstup
     print("Špatná vstupní hodnota!")
