@@ -1,27 +1,52 @@
-# Zadá časový údaj ve formátu "15:41" do proměnné "time"
-time = input('Please enter your time (format HH:MM): ')  # 12:51
+# Zadání časového údaje ve formátu "15:41" do proměnné "time"
+time = input("Zadej čas ve formátu HH:MM:")
 
-# Hodnotu v proměnné rozdělí na list hodnot a uloží do proměnné "time_vals"
-time_vals = time.split(':')
+# Hodnotu v proměné rozdělí na list hodnot a uloží do proměnné "time_vals"
+time_vals = time.split(":")
 
-# Vytvoří proměnné "hours" and "mins", kterými přiřadí hodnoty z "time_vals"
-hours = time_vals[0]
-mins = time_vals[1]
+# Vytvoření proměnné "hours" and "mins", kterým přiřadí hodnoty z "time_vals"
+hours_str = time_vals[0]
+mins_str = time_vals[1]
 
-# Pokud je hodnota v "hours" větší jak 12, převede na příslušný string
-if int(hours) <= 12:
-        adjusted_hours = hours
-
- # ... jinak ponechá hodnotu původní
+#Ověří zda bylo zadáno číslo a ve formátu 0-24h a 0-60min
+if hours_str.isnumeric() and mins_str.isnumeric() and int(hours_str) < 25 and int(mins_str) < 61:
+    print("Zadaný čas:", time)    
+    
 else:
-    adjusted_hours = str(int(hours) - 12)
+    print("Chybně zadaný čas HH:MM", time)
+    quit()
 
+#Převod hodin a  minut na integer   
+hours = int(hours_str)
+mins = int(mins_str)
+hours_min = hours
 
+#Převod 60min na hodinu
+if mins == 60:
+    hours_min = hours + 1      
+    mins = 0
+    
+#Převod hodin
+if hours_min == 24:
+    adjusted_hours = hours_min - 24 
+
+elif 24 > hours_min > 12:
+    adjusted_hours = hours_min - 12
+    
+elif 0 <= hours_min <= 12:
+    adjusted_hours = hours_min
+    
+else:
+    print("Chybně zadaný čas 0-24h")
+    quit()
+    
 # Označí denní dobu a uloží "AM"/"PM" do proměnné "daytime"
-if int(hours) >= 12:
+if 23 >= hours_min >= 12:
     daytime = "PM"
+
 else:
     daytime = "AM"
+    
+# Vypiš převedený čas s doplňující větou
 
-# Vypíše převedený čas s doplňující větou
-print('Converted to english format:', adjusted_hours, ':', mins, daytime)
+print("Converted to english format:", adjusted_hours, ":",mins, daytime)
